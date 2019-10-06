@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mpage.views import main_page, char_page
-
+from django.contrib.auth.views import LoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page, name='main_page'),
     path('<str:ch1>/<str:ch2>/<int:int1>', char_page, name='main_page'),
+    path('login/', LoginView.as_view(template_name='login.html'), name='login_page'),
 
 ]
