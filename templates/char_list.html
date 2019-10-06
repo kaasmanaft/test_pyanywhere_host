@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>charlist</title>
+</head>
+<body>
+{% for line in db    %}
+    <ul>
+
+        <li>
+        {{ line.ch1 }}
+        </li>
+
+        <li>
+        {{ line.ch2 }}
+        </li>
+
+        <li>
+        {{ line.int1 }}
+        </li>
+
+    </ul>
+
+{% endfor %}
+</body>
+</html>
